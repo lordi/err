@@ -3,12 +3,15 @@ import logging
 import inspect
 import os
 import re
-from html import entities
 import sys
 import time
 
 PY3 = sys.version_info[0] == 3
 PY2 = not PY3
+if PY3:
+    from html import entities
+else:
+    import htmlentitydefs as entities
 
 PLUGINS_SUBDIR = b'plugins' if PY2 else 'plugins'
 

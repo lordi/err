@@ -1,7 +1,7 @@
 import logging
 from errbot import BotPlugin
 from errbot.version import VERSION
-from urllib.request import urlopen
+from urllib2 import urlopen
 from errbot.utils import version2array
 
 HOME = 'http://www.gootz.net/err/version'
